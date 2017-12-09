@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Ballmovement.cs" />
      <Compile Include="Assets\Scripts\goal.cs" />
      <Compile Include="Assets\Scripts\keymovement.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\MovementWmouse.cs" />
      <Compile Include="Assets\Scripts\ScoreScript.cs" />
      <Compile Include="Assets\Scripts\Winner.cs" />
