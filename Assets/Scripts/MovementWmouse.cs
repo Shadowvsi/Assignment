@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovementWmouse : MonoBehaviour {
-
+	public float speed = 200;
 	// Use this for initialization
-	public float horizontalSpeed = 2.0F;
-	public float verticalSpeed = 2.0F;
 	void Update() {
-		float h = horizontalSpeed * Input.GetAxis("Mouse Y");
-		float v = verticalSpeed * Input.GetAxis("Mouse X");
-		transform.Translate(v, h, 0);
+		Vector3 pos = transform.position;
+		if (Input.GetMouseButton(0)) {
+			if (pos.y < 382) {
+				pos.y += speed * Time.deltaTime;
+			}
+		}
+		if (Input.GetMouseButton(1)) {
+			if (pos.y > 36) {
+				pos.y -= speed * Time.deltaTime;
+			}
+		}
+		transform.position = pos;
 	}
 }

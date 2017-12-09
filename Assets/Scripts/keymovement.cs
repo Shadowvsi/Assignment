@@ -15,18 +15,27 @@ public class keymovement : MonoBehaviour {
 		Vector3 pos = transform.position;
 
 		if (Input.GetKey (KeyCode.UpArrow)) {
-			pos.y += speed * Time.deltaTime;
+			if (pos.y < 380) {
+				pos.y += speed * Time.deltaTime;
+			}
 		}
+
 		if (Input.GetKey (KeyCode.DownArrow)) {
-			pos.y -= speed * Time.deltaTime;
+			if (pos.y > 36) {
+				pos.y -= speed * Time.deltaTime;
+			}
 
 		}
+
 		if (Input.GetKey ("w")) {
-			pos.y += speed * Time.deltaTime;
+			if (pos.y < 382) {
+				pos.y += speed * Time.deltaTime;
+			}
 		}
 		if (Input.GetKey ("s")) {
-			pos.y -= speed * Time.deltaTime;
-
+			if (pos.y > 36) {
+				pos.y -= speed * Time.deltaTime;
+			}
 		}
 		transform.position = pos;
 		

@@ -9,7 +9,7 @@ public class BallController : MonoBehaviour {
 	void Start () {
 
 		rb = GetComponent<Rigidbody2D> ();
-		rb.velocity = new Vector2 (150f, 150f);
+		rb.velocity = new Vector2 (170f, 170f);
 		
 	}
 	
