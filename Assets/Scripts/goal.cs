@@ -10,6 +10,7 @@ public class goal : MonoBehaviour {
 	private BallController bc;
 
 	void Start () {
+		ScoreScriptInstance = GameObject.Find ("SceneManager").GetComponent<ScoreScript> ();
 		rb = GetComponent<Rigidbody2D> ();
 		bc = GetComponent<BallController> ();
 		WasGoal = false;

@@ -22,7 +22,7 @@ public class BallController : MonoBehaviour {
 		if (SceneManager.GetActiveScene ().name == "level1")
 			speed = 300f;
 		if (SceneManager.GetActiveScene ().name == "level2")
-			speed = 330f;
+			speed = 370f;
 		if (SceneManager.GetActiveScene ().name == "level3")
 			speed = 450f;
 
