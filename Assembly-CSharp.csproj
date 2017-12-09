@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\keymovement.cs" />
      <Compile Include="Assets\Scripts\MovementWmouse.cs" />
      <Compile Include="Assets\Scripts\ScoreScript.cs" />
+     <Compile Include="Assets\Scripts\Winner.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/Vincent/Desktop/Assignment 2/Assignment game/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>

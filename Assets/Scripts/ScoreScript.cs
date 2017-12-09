@@ -16,13 +16,20 @@ public class ScoreScript : MonoBehaviour {
 	
 	}
 
-	string lvl1Score = "";
-	int p1wins = 0, p2wins = 0;
+	public string lvl1Score = "";
+	public string lvl2Score = "";
+	public string lvl3Score = "";
+	public int p1wins = 0, p2wins = 0;
+
+
 	public Text p1Scoretxt, p2Scoretxt;
 	private int P1Score, P2Score;
 
 
 	public void Increment(Score whichScore){
+		p1Scoretxt = GameObject.FindGameObjectWithTag ("p1ScoreText").GetComponent<Text>();
+		p2Scoretxt = GameObject.FindGameObjectWithTag ("p2ScoreText").GetComponent<Text>();
+
 		if (whichScore == Score.p2Score)
 			p2Scoretxt.text = (++P2Score).ToString ();
 		else
@@ -30,11 +37,25 @@ public class ScoreScript : MonoBehaviour {
 		
 		if (P1Score == 5 || P2Score == 5 && SceneManager.GetActiveScene ().name == "level1") {
 			lvl1Score = P1Score + " - " + P2Score;
-			P1Score == 5? p1wins++: p2wins;
+			if (P1Score == 5)
+				p1wins++;
+			else p2wins++;
 			SceneManager.LoadScene ("level2");
 		}
-		if(P1Score == 10 || P2Score == 5 && SceneManager.GetActiveScene().name == "level2")SceneManager.LoadScene("level3");
-		if(P1Score == 15 || P2Score == 5 && SceneManager.GetActiveScene().name == "level3")SceneManager.LoadScene("Win");
+		if (P1Score == 10 || P2Score == 5 && SceneManager.GetActiveScene ().name == "level2") {
+			lvl2Score = P1Score + " - " + P2Score;
+			if (P1Score == 10)
+				p1wins++;
+			else p2wins++;
+			SceneManager.LoadScene ("level3");
+		}
+		if (P1Score == 15 || P2Score == 5 && SceneManager.GetActiveScene ().name == "level3") {
+			lvl3Score = P1Score + " - " + P2Score;
+			if (P1Score == 15)
+				p1wins++;
+			else p2wins++;
+			SceneManager.LoadScene ("Win");
+		}
 	}
 
 
