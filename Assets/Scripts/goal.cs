@@ -16,19 +16,19 @@ public class goal : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (!WasGoal) {
-			if (other.tag == "p1Score") {
-				ScoreScriptInstance.Increment (ScoreScript.Score.netp1);
+			if (other.tag == "p1Goal") {
+				ScoreScriptInstance.Increment (ScoreScript.Score.p1Score);
 				WasGoal = true;
-				StartCoroutine (ResetScore ());
+				StartCoroutine (ResetBall ());
 			}
-			else if (other.tag == "p2Score") {
-				ScoreScriptInstance.Increment (ScoreScript.Score.netp2);
+			else if (other.tag == "p2Goal") {
+				ScoreScriptInstance.Increment (ScoreScript.Score.p2Score);
 				WasGoal = true;
-				StartCoroutine (ResetScore ());
+				StartCoroutine (ResetBall ());
 			}
 		}
 	}
-	private IEnumerator ResetScore()
+	private IEnumerator ResetBall()
 	{
 		yield return new WaitForSecondsRealtime (1);
 		WasGoal = false;

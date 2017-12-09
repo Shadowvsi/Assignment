@@ -32,3 +32,5 @@ C:\Users\a106105\Documents\Unity\Assignment game\Temp\bin\Debug\UnityEngine.VR.x
 C:\Users\a106105\Documents\Unity\Assignment game\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\a106105\Documents\Unity\Assignment game\obj\Debug\Assembly-CSharp.dll
 C:\Users\a106105\Documents\Unity\Assignment game\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Vincent\Desktop\Assignment 2\Assignment game\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Vincent\Desktop\Assignment 2\Assignment game\obj\Debug\Assembly-CSharp.dll

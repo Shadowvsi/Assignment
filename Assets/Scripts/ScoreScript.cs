@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class ScoreScript : MonoBehaviour {
 	public enum Score
 	{
-		netp1, netp2
+		p1Score, p2Score
 
 	}
-	public Text p1Score, p2Score;
-	private int p1Scores, p2Scores;
+	public Text p1Scoretxt, p2Scoretxt;
+	private int P1Score, P2Score;
 
 
 	public void Increment(Score whichScore){
-		if (whichScore == Score.netp2)
-			p2Score.text = (++p2Scores).ToString ();
+		if (whichScore == Score.p2Score)
+			p2Scoretxt.text = (++P2Score).ToString ();
 		else
-			p1Score.text = (++p1Scores).ToString ();
+			p1Scoretxt.text = (++P1Score).ToString ();
 		
 	}
 }
