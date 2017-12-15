@@ -20,11 +20,11 @@ public class BallController : MonoBehaviour {
 		yield return new WaitForSecondsRealtime (1);
 
 		if (SceneManager.GetActiveScene ().name == "level1")
-			speed = 400f;
-		if (SceneManager.GetActiveScene ().name == "level2")
 			speed = 450f;
-		if (SceneManager.GetActiveScene ().name == "level3")
+		if (SceneManager.GetActiveScene ().name == "level2")
 			speed = 550f;
+		if (SceneManager.GetActiveScene ().name == "level3")
+			speed = 600f;
 
 		//this.transform.Rotate(new Vector3(0, 0, Random.Range(0, 360)));
 
